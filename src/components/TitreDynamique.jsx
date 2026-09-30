@@ -11,7 +11,8 @@ function TitreDynamique() {
     console.log("✨ Composant monté !");
   }, []);
   return (
-    <div>
+    <div className="divTest">
+      {" "}
       <h2>compteur: {compteur}</h2>
       <button onClick={() => setCompteur(compteur + 1)}>+1</button>
     </div>
