@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 // import TitreDynamique from "./components/TitreDynamique";
 import "./App.css";
 // import TailleFenetre from "./components/TaileFenetre";
+// import BlagueAleatoire from "./components/BlagueAleatoire";
+
 
 function App() {
   const [nomUtilisateur, setNomUtilisateur] = useState("visiteur");
@@ -29,6 +31,7 @@ function App() {
       {/* <TitreDynamique /> */}
       {/* <Chronometre /> */}
       {/* <TailleFenetre /> */}
+      {/* <BlagueAleatoire/> */}
     </div>
   );
 }
