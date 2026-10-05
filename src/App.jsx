@@ -1,38 +1,23 @@
-import { useState, useEffect } from "react";
-// import Chronometre from "./components/Chronometre";
-// import TitreDynamique from "./components/TitreDynamique";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layouts";
+import Dashboard from "./pages/Dashboard";
+import Tasks from "./pages/Tasks";
+import Notes from "./pages/Notes";
+import Settings from "./pages/Settings";
+import NotFound from "./pages/Notfound";
 import "./App.css";
-// import TailleFenetre from "./components/TaileFenetre";
-// import BlagueAleatoire from "./components/BlagueAleatoire";
-
 
 function App() {
-  const [nomUtilisateur, setNomUtilisateur] = useState("visiteur");
-  const [secondesActivite, setSecondesActivite] = useState(0);
-
-  useEffect(() => {
-    document.title = `Tableau de Bord - ${nomUtilisateur}`;
-  }, [nomUtilisateur]);
-
-  useEffect(() => {
-    const idTimer = setInterval(() => {
-      setSecondesActivite((s) => s + 1);
-    }, 1000);
-    return () => {
-      clearInterval(idTimer);
-    };
-  }, []);
-
   return (
-    <div className="app">
-      <h1>Bienvenue {nomUtilisateur} !</h1>
-      <p>⏱️ Temps de session : {secondesActivite} secondes</p>
-      <input type="text" placeholder="User..." onChange={(e) => setNomUtilisateur(e.target.value)}/>
-      {/* <TitreDynamique /> */}
-      {/* <Chronometre /> */}
-      {/* <TailleFenetre /> */}
-      {/* <BlagueAleatoire/> */}
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 
