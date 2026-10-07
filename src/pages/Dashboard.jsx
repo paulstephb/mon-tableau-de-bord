@@ -1,15 +1,13 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import WeatherWidget from "../components/WeatherWidget";
 
-
-
 function Dashboard() {
-//   const [nomUtilisateur, setNomUtilisateur] = useState("visiteur");
+  //   const [nomUtilisateur, setNomUtilisateur] = useState("visiteur");
   const [secondesActivite, setSecondesActivite] = useState(0);
 
-//   useEffect(() => {
-//     document.title = `Tableau de Bord - ${nomUtilisateur}`;
-//   }, [nomUtilisateur]);
+  //   useEffect(() => {
+  //     document.title = `Tableau de Bord - ${nomUtilisateur}`;
+  //   }, [nomUtilisateur]);
 
   useEffect(() => {
     const idTimer = setInterval(() => {
@@ -22,9 +20,10 @@ function Dashboard() {
 
   return (
     <div className="app">
-     <h2>Tableau de bord</h2>
+      <h2>Tableau de bord</h2>
       <p>Bienvenue sur votre espace personnel !</p>
-      <p>⏱️ Temps de session : {secondesActivite} secondes</p>      {/* <TitreDynamique /> */}
+      <p>⏱️ Temps de session : {secondesActivite} secondes</p>{" "}
+      {/* <TitreDynamique /> */}
       {/* <Chronometre /> */}
       {/* <TailleFenetre /> */}
       {/* <BlagueAleatoire/> */}

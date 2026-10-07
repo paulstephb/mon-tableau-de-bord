@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NotFound() {
   return (
     <div style={{ textAlign: 'center', padding: '48px 16px' }}>
-      <h2 style={{ fontSize: '48px', marginBottom: '8px' }}>404</h2>
+      <h2 style={{ fontSize: '48px', marginBottom: '8px', color: '#3b82f6' }}>404</h2>
       <p style={{ fontSize: '18px', color: '#64748b', marginBottom: '24px' }}>
         Oups ! Cette page n'existe pas.
       </p>

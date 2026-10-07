@@ -6,6 +6,7 @@ import Notes from "./pages/Notes";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/Notfound";
 import "./App.css";
+import TaskDetail from "./pages/TaskDetail";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Dashboard />} />
         <Route path="/tasks" element={<Tasks />} />
+        <Route path="tasks/:id" element={<TaskDetail />} />
+
         <Route path="/notes" element={<Notes />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
